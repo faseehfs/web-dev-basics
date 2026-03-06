@@ -1,63 +1,81 @@
 :root {
-  /* --- Primary Brand Colors --- */
-  --primary: #007bff; /* Main brand color, used for buttons, links, highlights */
-  --primary-light: #339cff; /* Lighter variant, for hover states or backgrounds */
-  --primary-dark: #0056b3; /* Darker variant, for active states or borders */
-  --primary-muted: #cce5ff; /* Soft version, for subtle text or backgrounds */
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-primary-active: #1d4ed8;
+  --color-on-primary: #fff;
 
-  /* --- Secondary / Supporting Colors --- */
-  --secondary: #6c757d; /* Secondary color, less prominent UI elements */
-  --secondary-light: #a6a9ad; /* Lighter variant for backgrounds or disabled states */
-  --secondary-dark: #494f54; /* Darker variant for borders or text */
-  --secondary-muted: #e2e3e5; /* Soft muted background or subtle text */
+  --color-secondary: #3b82f6;
+  --color-secondary-hover: #2563eb;
+  --color-secondary-active: #1d4ed8;
+  --color-on-secondary: #fff;
 
-  /* --- Status Colors --- */
-  --success: #28a745; /* Indicates success, e.g., success messages, check marks */
-  --success-light: #5cd65c; /* Lighter variant for backgrounds */
-  --success-dark: #1e7e34; /* Darker variant for text or borders */
-  --success-muted: #d4edda; /* Soft background for alerts or subtle highlights */
+  --color-success: #22c55e;
+  --color-warning: #eab308;
+  --color-danger: #ef4444;
+  --color-info: #0ea5e9;
 
-  --danger: #dc3545; /* Indicates errors or danger */
-  --danger-light: #e66775; /* Lighter variant for backgrounds */
-  --danger-dark: #a71d2a; /* Darker variant for text or borders */
-  --danger-muted: #f8d7da; /* Soft background for alerts or subtle highlights */
+  --color-bg-page: #ffffff;    /* Main background */
+  --color-bg-surface: #ebebeb; /* Background for UI elements placed on top of the page */
 
-  --warning: #ffc107; /* Warning messages or highlights */
-  --warning-light: #ffe08a; /* Lighter variant for backgrounds */
-  --warning-dark: #cc9a06; /* Darker variant for text or borders */
-  --warning-muted: #fff3cd; /* Soft background for alerts or subtle highlights */
+  --color-text: #111827;
+  --color-text-muted: #6b7280;
 
-  --info: #17a2b8; /* Informational messages or highlights */
-  --info-light: #4fc3d7; /* Lighter variant for backgrounds */
-  --info-dark: #117a8b; /* Darker variant for text or borders */
-  --info-muted: #d1ecf1; /* Soft background for alerts or subtle highlights */
+  --color-border: #a4c2ff;
+  --color-border-strong: #88b7ff;
+}
 
-  /* --- Neutral / Grayscale --- */
-  --light: #f8f9fa; /* Light background, surfaces */
-  --light-muted: #f1f3f5; /* Softer background for cards or sections */
-  --dark: #343a40; /* Dark background or text */
-  --dark-muted: #495057; /* Secondary dark for subtle text */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #60a5fa;
+    --color-primary-hover: #3b82f6;
+    --color-primary-active: #2563eb;
+    --color-on-primary: #0b1220;
 
-  --text-primary: #212529; /* Main text color */
-  --text-secondary: #6c757d; /* Secondary/subtle text */
-  --text-muted: #868e96; /* Very muted, low emphasis text */
-  --text-inverse: #ffffff; /* Text on dark backgrounds */
+    --color-secondary: #60a5fa;
+    --color-secondary-hover: #3b82f6;
+    --color-secondary-active: #2563eb;
+    --color-on-secondary: #0b1220;
 
-  --border: #dee2e6; /* Default border color */
-  --border-muted: #e9ecef; /* Lighter borders for subtle divisions */
+    --color-success: #4ade80;
+    --color-warning: #facc15;
+    --color-danger: #f87171;
+    --color-info: #38bdf8;
 
-  /* --- Accent / Special Purpose Colors --- */
-  --accent: #ff5722; /* Accent color for highlights, badges, or icons */
-  --accent-light: #ff8a50; /* Lighter accent for backgrounds or hover states */
-  --accent-dark: #e64a19; /* Darker accent for borders or text */
-  --accent-muted: #ffece6; /* Soft accent for subtle UI elements */
+    --color-bg-page: #0f172a;    /* Main background */
+    --color-bg-surface: #1e293b; /* Background for UI elements placed on top of the page */
 
-  /* --- Shadows and Overlays --- */
-  --shadow: rgba(0, 0, 0, 0.1); /* Default subtle shadow */
-  --overlay: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Semi-transparent overlay for modals or backgrounds */
+    --color-text: #e5e7eb;
+    --color-text-muted: #9ca3af;
+
+    --color-border: #334155;
+    --color-border-strong: #475569;
+  }
+}
+
+/* EXAMPLE USAGE */
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-bg-page);
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 600px;
+  margin: auto;
+}
+
+div {
+  background-color: var(--color-bg-surface);
+}
+
+button{
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  border: 3px solid var(--color-border)
+}
+
+button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+button:active {
+  background-color: var(--color-primary-active);
 }
